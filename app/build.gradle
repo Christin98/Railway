@@ -10,7 +10,6 @@ if (keystoreProperties.exists()) {
 }
 android {
     compileSdkVersion 30
-    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.kha.train"
         minSdkVersion 17
@@ -45,6 +44,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.kha.train'
 }
 
 dependencies {
