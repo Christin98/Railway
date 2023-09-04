@@ -30,7 +30,8 @@
         <activity android:name="com.kha.train.activity.TrainScheduleMainActivity" />
         <activity android:name="com.kha.train.activity.LiveStatusMainActivity" />
         <activity android:name="com.kha.train.activity.BookTicketMainActivity" />
-        <activity android:name="com.kha.train.activity.SplashActivity">
+        <activity android:name="com.kha.train.activity.SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
