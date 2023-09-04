@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="5.0dip"
+        android:layout_height="50.0dip"
+        android:layout_below="@+id/tv_date"
+        android:layout_marginLeft="100.0dip"
+        android:background="#BF2C1E5B" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65.0dip"
+        android:layout_marginTop="0.0dip"
+        android:background="@drawable/blue_fill_bt"
+        android:paddingLeft="20.0dip"
+        android:paddingTop="3.0dip"
+        android:paddingRight="20.0dip"
+        android:paddingBottom="3.0dip"
+        android:text="Day 1"
+        android:textColor="@color/white"
+        android:textSize="14.0sp"
+        app:txttype="@string/regular" />
+</RelativeLayout>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_train"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:padding="6.0dip"
+            android:src="@drawable/ic_back"
+            app:tint="@color/blue" />
+
+        <com.kha.train.widget.MyTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@+id/iv_back"
+            android:text="Train Route and Schedule"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/header_txt"
+            app:txttype="@string/medium"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/black"
+        android:layout_below="@+id/title_train"
+        />
+
+    <ScrollView
+        android:id="@+id/sv_data"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_train"
+        android:layout_alignParentStart="true"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_main"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black"
+                android:layout_marginTop="15dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip">
+
+                <ImageView
+                    android:id="@+id/iv_train_img"
+                    android:layout_width="35.0dip"
+                    android:layout_height="35.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@drawable/ic_train_img1"
+                    android:padding="3dp"
+                    />
+
+                <com.kha.train.widget.MyTextView
+                    android:id="@+id/tv_train_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_train_img"
+                    android:text="12345"
+                    android:textColor="@color/white"
+                    android:textSize="18.0sp"
+                    app:txttype="@string/medium"
+                    android:background="@drawable/blue_fill_bt"
+                    android:padding="2dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <com.kha.train.widget.MyTextView
+                    android:id="@+id/tv_train_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_train_id"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="MAS-NDLS TAMIL NADU EXP"
+                    android:textAllCaps="true"
+                    android:textColor="@color/blue"
+                    android:textSize="20.0sp"
+                    app:txttype="@string/regular"
+                    android:paddingLeft="3dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/black"
+                android:layout_marginTop="5dp"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginRight="20.0dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dip"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15.0dip"
+                        android:paddingRight="15.0dip"
+                        android:background="@drawable/train_rout_schedual_bg"
+                        >
+
+                        <com.kha.train.widget.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:text="Runs On"
+                            android:textSize="16.0sp"
+                            app:txttype="@string/regular"
+                            android:textColor="@color/black"
+                            />
+
+                        <com.kha.train.widget.MyTextView
+                            android:id="@+id/tv_train_day"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center|right"
+                            android:text=""
+                            android:textColor="@color/blue"
+                            android:textSize="16.0sp"
+                            app:txttype="@string/medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dip"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15.0dip"
+                        android:paddingRight="15.0dip"
+                        android:background="@drawable/train_rout_schedual_bg"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <com.kha.train.widget.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:text="Classes"
+                            android:textSize="16.0sp"
+                            app:txttype="@string/regular"
+                            android:textColor="@color/black"
+                            />
+
+                        <com.kha.train.widget.MyTextView
+                            android:id="@+id/tv_train_class"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center|right"
+                            android:text=""
+                            android:textColor="@color/blue"
+                            android:textSize="16.0sp"
+                            app:txttype="@string/medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dip"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15.0dip"
+                        android:paddingRight="15.0dip"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/train_rout_schedual_bg"
+                        >
+
+                        <com.kha.train.widget.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:text="Total Duration"
+                            android:textSize="16.0sp"
+                            app:txttype="@string/regular"
+                            android:textColor="@color/black"
+                            />
+
+                        <com.kha.train.widget.MyTextView
+                            android:id="@+id/tv_train_dur"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center|right"
+                            android:text=""
+                            android:textColor="@color/blue"
+                            android:textSize="16.0sp"
+                            app:txttype="@string/medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dip"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15.0dip"
+                        android:paddingRight="15.0dip"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/train_rout_schedual_bg"
+                        >
+
+                        <com.kha.train.widget.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:text="Number of Stop"
+                            android:textSize="16.0sp"
+                            app:txttype="@string/regular"
+                            android:textColor="@color/black"
+                            />
+
+                        <com.kha.train.widget.MyTextView
+                            android:id="@+id/tv_num_stop"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center|right"
+                            android:text=""
+                            android:textColor="@color/blue"
+                            android:textSize="16.0sp"
+                            app:txttype="@string/medium" />
+                    </LinearLayout>
+
+                    <!--<View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:background="#ffe7e7e7" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:background="#ffe7e7e7" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:background="#ffe7e7e7" />-->
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:background="@color/black"
+                android:layout_marginTop="25.0dip"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_train_schd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <com.kha.train.widget.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dip"
+                android:paddingLeft="15.0dip"
+                android:text="Disclaimer"
+                android:textColor="@color/black"
+                android:textSize="18.0sp"
+                app:txttype="@string/medium" />
+
+            <com.kha.train.widget.MyTextView
+                android:id="@+id/tv_disclam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="20.0dip"
+                android:paddingLeft="15.0dip"
+                android:text=""
+                android:textColor="#ff2c2c2c"
+                android:textSize="14.0sp"
+                app:txttype="@string/regular" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/layout_no_data"
+        layout="@layout/layout_no_data_found"
+        android:visibility="gone" />
+</RelativeLayout>

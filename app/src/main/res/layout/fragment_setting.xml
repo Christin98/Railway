@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/bg_squre_white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:padding="6.0dip"
+            android:src="@drawable/ic_back"
+            android:visibility="gone" />
+
+        <com.kha.train.widget.MyTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@+id/iv_back"
+            android:gravity="center"
+            android:text="Setting"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/header_txt"
+            android:textStyle="bold"
+            app:txttype="@string/medium"
+
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_time_formate"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/rl_header"
+        android:layout_marginTop="10.0dip"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="0.0dip">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.7dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/black" />
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_change_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip"
+            android:text="Change Time Formate"
+            android:textColor="@color/blue"
+            android:textSize="17.0sp"
+            app:txttype="@string/regular"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_24hr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_12hr"
+            android:background="@drawable/blue_fill_bt"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:text="24 hours"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_12hr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/blue_fill_out_bt"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:text="12 hours"
+            android:textColor="@color/blue"
+            android:textSize="15dp" />
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.7dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5.0dip"
+            android:background="@color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_privacy"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ll_time_formate"
+        android:layout_marginTop="15.0dip"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="0.0dip">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.7dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/black" />
+
+        <com.kha.train.widget.MyTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip"
+            android:text="Privacy Policy"
+            android:textColor="@color/blue"
+            android:textSize="17.0sp"
+            app:txttype="@string/regular"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/blue_fill_bt"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:text="Privacy"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.7dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_privcy"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_privce_header"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/bg_squre_white">
+
+            <ImageView
+                android:id="@+id/iv_priv_back"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_centerVertical="true"
+                android:padding="6.0dip"
+                android:src="@drawable/ic_back" />
+
+            <com.kha.train.widget.MyTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@+id/iv_priv_back"
+                android:text="Privacy Policy"
+                android:textColor="@color/app_header_txt"
+                android:textSize="@dimen/header_txt"
+                app:txttype="@string/medium" />
+        </RelativeLayout>
+
+        <WebView
+            android:id="@+id/wb_privcy"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/rl_privce_header" />
+    </RelativeLayout>
+</RelativeLayout>

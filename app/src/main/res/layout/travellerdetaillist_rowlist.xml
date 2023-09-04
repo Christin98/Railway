@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20.0dip"
+    android:paddingBottom="10.0dip">
+
+    <CheckBox
+        android:id="@+id/ch_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:layout_toRightOf="@+id/ch_add"
+        android:text="Fkjj jgh"
+        android:textColor="@color/black"
+        android:textSize="18.0sp"
+        app:txttype="@string/medium" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip"
+        android:text="EDIT"
+        android:textColor="@color/item_select"
+        android:textSize="18.0sp"
+        app:txttype="@string/medium" />
+
+    <ImageView
+        android:id="@+id/iv_user"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginRight="5.0dip"
+        android:layout_toRightOf="@+id/ch_add"
+        android:padding="2.0dip"
+        android:src="@drawable/ic_user" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_ticket_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_toRightOf="@+id/iv_user"
+        android:paddingRight="10.0dip"
+        android:text="62 yr,Full Berth,Male"
+        android:textColor="@color/black"
+        android:textSize="14.0sp"
+        app:txttype="@string/regular" />
+
+    <ImageView
+        android:id="@+id/iv_window"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_below="@+id/tv_ticket_detail"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_toRightOf="@+id/ch_add"
+        android:padding="2.0dip"
+        android:src="@drawable/ic_seat" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_seat_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ticket_detail"
+        android:layout_marginTop="5.0dip"
+        android:layout_toRightOf="@+id/iv_user"
+        android:paddingRight="10.0dip"
+        android:text="Window"
+        android:textColor="@color/black"
+        android:textSize="14.0sp"
+        app:txttype="@string/regular" />
+
+    <ImageView
+        android:id="@+id/iv_coupon"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_below="@+id/tv_seat_type"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_toRightOf="@+id/ch_add"
+        android:padding="2.0dip"
+        android:src="@drawable/ic_discount" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_conceson"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_seat_type"
+        android:layout_marginTop="5.0dip"
+        android:layout_toRightOf="@+id/iv_user"
+        android:paddingRight="10.0dip"
+        android:text="100% concession applied"
+        android:textColor="@color/black"
+        android:textSize="14.0sp"
+        app:txttype="@string/regular" />
+
+    <com.kha.train.widget.MyTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_conceson"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginRight="25.0dip"
+        android:layout_toRightOf="@+id/ch_add"
+        android:background="#ffc1f1dd"
+        android:paddingLeft="10.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingBottom="5.0dip"
+        android:text="please carry an age proof in the train"
+        android:textColor="#ff1a7971" />
+</RelativeLayout>

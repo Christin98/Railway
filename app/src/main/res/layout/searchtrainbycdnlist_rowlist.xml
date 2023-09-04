@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_city"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/vie"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/black"/>
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40.0dip"
+        android:paddingRight="20.0dip"
+        android:paddingBottom="10.0dip"
+        android:layout_below="@+id/vie"
+        android:paddingTop="10dp"
+        >
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_city_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingRight="5.0dip"
+            android:text="Delhi"
+            android:textColor="@color/black"
+            android:textSize="20.0sp"
+            app:txttype="@string/regular" />
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_station_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_city_name"
+            android:text="old Delhi Railway Station"
+            android:textColor="@color/black"
+            app:txttype="@string/regular" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

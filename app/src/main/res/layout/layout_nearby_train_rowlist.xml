@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_nearby_train"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="60.0dip"
+    android:paddingLeft="10.0dip"
+    android:paddingRight="10.0dip">
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="08 Mar\nFri"
+        android:textColor="@color/black"
+        android:textSize="15.0sp"
+        app:txttype="@string/regular"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:rotation="270"
+        android:src="@drawable/ic_down_drop"
+        app:tint="@color/blue" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_avalib_tid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/iv_arrow"
+        android:layout_toRightOf="@+id/tv_date"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingRight="5.0dip"
+        android:text="GWLNW105/WL85"
+        android:textColor="@color/blue"
+        android:textSize="20.0sp"
+        />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="#ffe7e7e7" />
+</RelativeLayout>

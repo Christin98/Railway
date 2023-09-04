@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15.0dip"
+    android:layout_marginTop="10.0dip"
+    android:layout_marginRight="15.0dip"
+    android:layout_marginBottom="10.0dip"
+    android:background="@drawable/bg_squre_white"
+    android:orientation="vertical"
+    android:paddingBottom="10.0dip">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10.0dip">
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_train_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/blue_fill_bt"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="22106"
+            android:textColor="@color/white"
+            android:textSize="20.0sp"
+            app:txttype="@string/light" />
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/tv_train_id"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="INDRAYANI EXP"
+            android:textColor="@color/black"
+            android:textSize="24.0sp"
+            android:textStyle="bold"
+            app:txttype="@string/light" />
+
+        <RelativeLayout
+            android:id="@+id/fomAndToName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_train_id"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.kha.train.widget.MyTextView
+                android:id="@+id/tv_from_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="PUNE"
+                android:textColor="@color/black"
+                android:textSize="14.0sp"
+                app:txttype="@string/medium" />
+
+            <ImageView
+                android:id="@+id/iv_dot1"
+                android:layout_width="8.0dip"
+                android:layout_height="8.0dip"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/tv_from_name"
+                android:src="@drawable/ic_dot"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                android:layout_toLeftOf="@+id/tv_to_name"
+                android:layout_toRightOf="@+id/tv_from_name"
+                android:background="#ff9b9b9b" />
+
+            <ImageView
+                android:id="@+id/iv_dot2"
+                android:layout_width="8.0dip"
+                android:layout_height="8.0dip"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="3dp"
+                android:layout_toLeftOf="@+id/tv_to_name"
+                android:src="@drawable/ic_dot" />
+
+            <com.kha.train.widget.MyTextView
+                android:id="@+id/tv_to_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="KYN"
+                android:textColor="#272727"
+                android:textSize="13.0sp"
+                app:txttype="@string/regular" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_time1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fomAndToName"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/ll_time"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginTop="10.0dip"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10dp"
+                android:visibility="visible">
+
+                <com.kha.train.widget.MyTextView
+                    android:id="@+id/tv_depture_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="18:35"
+                    android:textColor="@color/black"
+                    android:textSize="20.0sp"
+                    app:txttype="@string/medium" />
+
+                <ImageView
+                    android:id="@+id/iv_dot11"
+                    android:layout_width="8.0dip"
+                    android:layout_height="8.0dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/tv_depture_time"
+                    android:src="@drawable/ic_dot"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toLeftOf="@+id/tv_arrive_time"
+                    android:layout_toRightOf="@+id/tv_depture_time"
+                    android:background="#ff9b9b9b" />
+
+                <ImageView
+                    android:id="@+id/iv_dot22"
+                    android:layout_width="8.0dip"
+                    android:layout_height="8.0dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="3dp"
+                    android:layout_toLeftOf="@+id/tv_arrive_time"
+                    android:src="@drawable/ic_dot" />
+
+                <com.kha.train.widget.MyTextView
+                    android:id="@+id/tv_time_diff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="02h 15m 0s"
+                    android:textColor="#4A4A4A"
+                    android:textSize="12.0sp"
+                    app:txttype="@string/regular" />
+
+                <com.kha.train.widget.MyTextView
+                    android:id="@+id/tv_arrive_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="20:50"
+                    android:textColor="#272727"
+                    android:textSize="18.0sp"
+                    app:txttype="@string/regular" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_site"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_time1"
+            android:scrollbars="none">
+            <LinearLayout
+                android:id="@+id/ll_site"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible" />
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_nearby_train"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_time1"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_quota"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/bg_round_corner_white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="15.0dip">
+
+                <LinearLayout
+                    android:id="@+id/ll_gen"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:tag="1">
+
+                    <ImageView
+                        android:id="@+id/iv_general_check"
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:layout_marginRight="3.0dip"
+                        android:src="@drawable/ic_blue_check_box_" />
+
+                    <com.kha.train.widget.MyTextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="General Quota"
+                        android:textColor="@color/blue"
+                        android:textSize="12.0sp"
+                        app:txttype="@string/regular" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_tatkal"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:tag="2">
+
+                    <ImageView
+                        android:id="@+id/iv_tatkal_check"
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:layout_marginRight="3.0dip"
+                        android:src="@drawable/ic_empty_check_box"
+                        android:visibility="visible" />
+
+                    <com.kha.train.widget.MyTextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="Tatkal Quota"
+                        android:textColor="@color/blue"
+                        android:textSize="12.0sp"
+                        app:txttype="@string/regular" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ladis"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:tag="3">
+
+                    <ImageView
+                        android:id="@+id/iv_ladies_check"
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:layout_marginRight="3.0dip"
+                        android:src="@drawable/ic_empty_check_box"
+                        android:visibility="visible" />
+
+                    <com.kha.train.widget.MyTextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="Ladies Quota"
+                        android:textColor="@color/blue"
+                        android:textSize="12.0sp"
+                        app:txttype="@string/regular" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginTop="20.0dip"
+                android:background="#ffe7e7e7" />
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3.0dip"
+                android:background="@drawable/bg_squre_white"
+                android:fillViewport="true"
+                android:scrollbars="none"
+                android:layout_marginTop="5dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" />
+
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/ll_nearby_train_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <ProgressBar
+                android:id="@+id/pb_loader"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginBottom="20.0dip"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_nearby_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip"
+        android:tag="0">
+
+        <com.kha.train.widget.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3.0dip"
+            android:paddingBottom="3.0dip"
+            android:text="Nearby Dates and Tatkal quota"
+            android:textColor="@color/blue"
+            android:textSize="15dp"
+            app:txttype="@string/medium" />
+
+        <ImageView
+            android:id="@+id/dropDownIC"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_margin="3dp"
+            android:src="@drawable/ic_down_filled_arrow" />
+    </LinearLayout>
+</LinearLayout>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15.0dip"
+    android:layout_marginTop="10.0dip"
+    android:layout_marginRight="15.0dip"
+    android:layout_marginBottom="10.0dip"
+    android:background="@drawable/bg_squre_white"
+    android:orientation="vertical"
+    android:paddingBottom="10.0dip">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15.0dip">
+
+        <khaTCWhereismyTrain.widget.MyTextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_train_id"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="15.0dip"
+            android:text="INDRAYANI EXP"
+            android:textColor="@color/black"
+            android:textSize="24.0sp"
+            app:txttype="@string/light" />
+
+        <khaTCWhereismyTrain.widget.MyTextView
+            android:id="@+id/tv_train_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingRight="15.0dip"
+            android:text="\#22106"
+            android:textColor="#ff4b4b4b"
+            android:textSize="24.0sp"
+            app:txttype="@string/light" />
+
+        <LinearLayout
+            android:id="@+id/ll_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_train_id"
+            android:layout_marginTop="16.0dip"
+            android:layout_marginRight="8.0dip"
+            android:orientation="vertical"
+            android:paddingLeft="15.0dip">
+
+            <khaTCWhereismyTrain.widget.MyTextView
+                android:id="@+id/tv_depture_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:35"
+                android:textColor="@color/black"
+                android:textSize="18.0sp"
+                app:txttype="@string/medium" />
+
+            <khaTCWhereismyTrain.widget.MyTextView
+                android:id="@+id/tv_time_diff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:text="02h 15m 0s"
+                android:textColor="#ff868585"
+                android:textSize="12.0sp"
+                app:txttype="@string/regular" />
+
+            <khaTCWhereismyTrain.widget.MyTextView
+                android:id="@+id/tv_arrive_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20:50"
+                android:textColor="#ff4a4a4a"
+                android:textSize="18.0sp"
+                app:txttype="@string/regular" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_dot1"
+            android:layout_width="12.0dip"
+            android:layout_height="12.0dip"
+            android:layout_below="@+id/tv_train_id"
+            android:layout_marginTop="20.0dip"
+            android:layout_toRightOf="@+id/ll_time"
+            android:src="@drawable/ic_dot" />
+
+        <View
+            android:layout_width="1.0dip"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/iv_dot2"
+            android:layout_below="@+id/iv_dot1"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@+id/ll_time"
+            android:background="#ff9b9b9b" />
+
+        <ImageView
+            android:id="@+id/iv_dot2"
+            android:layout_width="12.0dip"
+            android:layout_height="12.0dip"
+            android:layout_alignBottom="@+id/ll_time"
+            android:layout_marginBottom="5.0dip"
+            android:layout_toRightOf="@+id/ll_time"
+            android:src="@drawable/ic_dot" />
+
+        <khaTCWhereismyTrain.widget.MyTextView
+            android:id="@+id/tv_from_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="16.0dip"
+            android:layout_toRightOf="@+id/iv_dot1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingRight="15.0dip"
+            android:text="PUNE"
+            android:textColor="@color/black"
+            android:textSize="18.0sp"
+            app:txttype="@string/medium" />
+
+        <khaTCWhereismyTrain.widget.MyTextView
+            android:id="@+id/tv_to_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ll_time"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_toRightOf="@+id/iv_dot2"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingRight="15.0dip"
+            android:text="KYN"
+            android:textColor="#ff4a4a4a"
+            android:textSize="18.0sp"
+            app:txttype="@string/regular" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_site"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_time"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/ll_site"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible" />
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_nearby_train"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_time"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_quota"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="20.0dip"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/bg_round_corner_white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="15.0dip">
+
+                <LinearLayout
+                    android:id="@+id/ll_gen"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:tag="1">
+
+                    <ImageView
+                        android:id="@+id/iv_general_check"
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:layout_marginRight="3.0dip"
+                        android:src="@drawable/ic_check_mark" />
+
+                    <khaTCWhereismyTrain.widget.MyTextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="General Quota"
+                        android:textColor="@color/item_select"
+                        android:textSize="12.0sp"
+                        app:txttype="@string/regular" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_tatkal"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:tag="2">
+
+                    <ImageView
+                        android:id="@+id/iv_tatkal_check"
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:layout_marginRight="3.0dip"
+                        android:src="@drawable/ic_check_mark"
+                        android:visibility="gone" />
+
+                    <khaTCWhereismyTrain.widget.MyTextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="Tatkal Quota"
+                        android:textColor="@color/item_select"
+                        android:textSize="12.0sp"
+                        app:txttype="@string/regular" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ladis"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:tag="3">
+
+                    <ImageView
+                        android:id="@+id/iv_ladies_check"
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:layout_marginRight="3.0dip"
+                        android:src="@drawable/ic_check_mark"
+                        android:visibility="gone" />
+
+                    <khaTCWhereismyTrain.widget.MyTextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="Ladies Quota"
+                        android:textColor="@color/item_select"
+                        android:textSize="12.0sp"
+                        app:txttype="@string/regular" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginTop="20.0dip"
+                android:background="#ffe7e7e7" />
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3.0dip"
+                android:background="@drawable/bg_squre_white"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/ll_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" />
+
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/ll_nearby_train_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <ProgressBar
+                android:id="@+id/pb_loader"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginBottom="20.0dip"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_nearby_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip"
+        android:tag="0">
+
+        <khaTCWhereismyTrain.widget.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3.0dip"
+            android:paddingBottom="3.0dip"
+            android:text="Nearby Dates and Tatkal quota"
+            android:textColor="@color/item_select"
+            app:txttype="@string/medium" />
+
+        <ImageView
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:src="@drawable/ic_down_drop" />
+    </LinearLayout>
+</LinearLayout>-->

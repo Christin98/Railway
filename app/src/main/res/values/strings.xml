@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kha Train</string>
+
+    <string name="Admob_ID">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_ad_id">ca-app-pub-3940256099942544/6300978110</string>
+    <string name="interstitial_ad_id">ca-app-pub-3940256099942544/1033173710</string>
+
+    <string name="privacy_policy">https://privacy.wordpress.com/privacy-policy/</string>
+
+
+    <string name="Rs">₹</string>
+
+
+    <string name="light">light</string>
+    <string name="material_calendar_friday">F</string>
+    <string name="material_calendar_monday">M</string>
+    <string name="material_calendar_negative_button">Cancel</string>
+    <string name="material_calendar_positive_button">OK</string>
+    <string name="material_calendar_saturday">S</string>
+    <string name="material_calendar_sunday">S</string>
+    <string name="material_calendar_thursday">T</string>
+    <string name="material_calendar_today_button">Today</string>
+    <string name="material_calendar_tuesday">T</string>
+    <string name="material_calendar_wednesday">W</string>
+    <string name="medium">medium</string>
+
+    <string name="no_internet">No internet connection</string>
+
+
+    <string name="popular_place">[{\"name\": \"All Stations\",\"code\": \"NDLS\",\"cityName\": \"Delhi,Delhi\"}, {\"name\": \"Kolkata Howrah Junction\", \"code\": \"HWH\", \"cityName\": \"Kolkata,West Bengal\" },{ \"name\": \"Kalyan Junction\", \"code\": \"KYN\", \"cityName\": \"Mumbai,Maharashtra\" },{ \"name\": \"Chennai Central Railway Station\", \"code\": \"MAS\", \"cityName\": \"Chennai,Tamil Nadu\" }, { \"name\": \"Chennai Central Railway Station\", \"code\": \"MAS\", \"cityName\": \"Chennai,Tamil Nadu\" }, { \"name\": \"Secunderabad Junction\", \"code\": \"SC\", \"cityName\": \"Hyderabad,Telangana\" }, { \"name\": \"Bangalore City Junction\", \"code\": \"SBC\", \"cityName\": \"Bangalore,Karnataka\" }, { \"name\": \"Pune Junction\", \"code\": \"PUNE\", \"cityName\": \"Pune,Maharashtra\" }, { \"name\": \"Ahmedabad Junction\", \"code\": \"ADI\", \"cityName\": \"Ahmedabad Junction\" }, { \"name\": \"Patna,Bihar\", \"code\": \"PNBE\", \"cityName\": \"Patna Junction\" }, { \"name\": \"Jaipur,Rajasthan\", \"code\": \"JP\", \"cityName\": \"Jaipur Railway Junction\" } ]</string>
+    <string name="popular_station_place">[ { \"name\": \"New Delhi Railway Station\", \"code\": \"NDLS\", \"cityName\": \"Delhi,Delhi\" }, { \"name\": \"Pune Junction\", \"code\": \"PUNE\", \"cityName\": \"Pune,Maharashtra\" }, { \"name\": \"Kolkata Howrah Junction\", \"code\": \"HWH\", \"cityName\": \"Kolkata,West Bengal\" }, { \"name\": \"Jaipur Railway Junction\", \"code\": \"JP\", \"cityName\": \"Jaipur,Rajasthan\" }, { \"name\": \"Chennai Central Railway Station\", \"code\": \"MAS\", \"cityName\": \"Chennai, Tamil Nadu\" }, { \"name\": \"Bangalore City Junction\", \"code\": \"SBC\", \"cityName\": \"Bangalore, Karnataka\" }, { \"name\": \"Secunderabad Junction\", \"code\": \"SC\", \"cityName\": \"Hyderabad, Telangana\" }, { \"name\": \"Mumbai Lokmanya Tilak Terminus Railway Station\", \"code\": \"LTT\", \"cityName\": \"Mumbai, Maharashtra\" }, { \"name\": \"Ahmedabad Junction\", \"code\": \"ADI\", \"cityName\": \"Ahmedabad, Gujarat\" }, { \"name\": \"Varanasi, Uttar Pradesh\", \"code\": \"BSB\", \"cityName\": \"Varanasi Junction\" }, { \"name\": \"Jammu Tawi Railway Station\", \"code\": \"JAT\", \"cityName\": \"Jammu, Jammu and Kashmir\" }, { \"name\": \"Lucknow Railway Junction\", \"code\": \"LKO\", \"cityName\": \"Lucknow, Uttar Pradesh\" } ]</string>
+
+    <!-- [ { \"name\": \"New Delhi Railway Station\", \"code\": \"NDLS\", \"cityName\": \"Delhi,Delhi\" }, { \"name\": \"Pune Junction\", \"code\": \"PUNE\", \"cityName\": \"Pune,Maharashtra\" }, { \"name\": \"Kolkata Howrah Junction\", \"code\": \"HWH\", \"cityName\": \"Kolkata,West Bengal\" }, { \"name\": \"Jaipur Railway Junction\", \"code\": \"JP\", \"cityName\": \"Jaipur,Rajasthan\" }, { \"name\": \"Chennai Central Railway Station\", \"code\": \"MAS\", \"cityName\": \"Chennai, Tamil Nadu\" }, { \"name\": \"Bangalore City Junction\", \"code\": \"SBC\", \"cityName\": \"Bangalore, Karnataka\" }, { \"name\": \"Secunderabad Junction\", \"code\": \"SC\", \"cityName\": \"Hyderabad, Telangana\" }, { \"name\": \"Mumbai Lokmanya Tilak Terminus Railway Station\", \"code\": \"LTT\", \"cityName\": \"Mumbai, Maharashtra\" }, { \"name\": \"Ahmedabad Junction\", \"code\": \"ADI\", \"cityName\": \"Ahmedabad, Gujarat\" }, { \"name\": \"Varanasi, Uttar Pradesh\", \"code\": \"BSB\", \"cityName\": \"Varanasi Junction\" }, { \"name\": \"Jammu Tawi Railway Station\", \"code\": \"JAT\", \"cityName\": \"Jammu, Jammu and Kashmir\" }, { \"name\": \"Lucknow Railway Junction\", \"code\": \"LKO\", \"cityName\": \"Lucknow, Uttar Pradesh\" } ]-->
+    <string name="popular_train_schedule">{\"data\": { \"r\": [ { \"dn\": \"New Delhi Mumbai Central Rajdhani Express\", \"_id\": \"8090559992002104398\", \"xtr\": { \"tid\": \"12952\" }, \"n\": \"New Delhi Mumbai Central Rajdhani Express\" }, { \"dn\": \"Tamil Nadu Express\", \"_id\": \"8313480192978373941\", \"xtr\": { \"tid\": \"12621\" }, \"n\": \"Tamil Nadu Express\" }, { \"dn\": \"Telangana AP Express\", \"_id\": \"8387197722726551970\", \"xtr\": { \"tid\": \"12724\" }, \"n\": \"Telangana AP Express\" }, { \"dn\": \"New Delhi Sealdah Rajdhani Express\", \"_id\": \"7310498030271899556\", \"xtr\": { \"tid\": \"12314\" }, \"n\": \"New Delhi Sealdah Rajdhani Express\" }, { \"dn\": \"New Delhi Amritsar Express\", \"_id\": \"7310498030271899556\", \"xtr\": { \"tid\": \"12013\" }, \"n\": \"New Delhi Amritsar Express\" } ] }, \"t\": 9.274, \"success\": true }</string>
+
+    <string name="regular">regular</string>
+
+
+    <string name="thin">thin</string>
+    <string name="went_wrong">Something went wrong !</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

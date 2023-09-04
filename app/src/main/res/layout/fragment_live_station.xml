@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:background="@drawable/bg_squre_white"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:padding="6.0dip"
+            android:src="@drawable/ic_back"
+            app:tint="@color/blue" />
+
+        <com.kha.train.widget.MyTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@+id/iv_back"
+            android:text="Live Station"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/header_txt"
+            app:txttype="@string/medium" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_data"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ll_st_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_des_lbl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_squre_white"
+                android:orientation="vertical">
+
+                    <com.kha.train.widget.MyTextView
+                        android:id="@+id/tv_dest_st"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:hint="Enter Destination Station(optional)"
+                        android:paddingLeft="15.0dip"
+                        android:paddingRight="15.0dip"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        app:txttype="@string/regular"
+                        android:background="@drawable/train_rout_schedual_bg"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        />
+
+                <com.kha.train.widget.MyTextView
+                    android:id="@+id/tv_junction"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_marginRight="20.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:text=""
+                    android:textColor="#3A3A3A"
+                    android:textSize="12.0sp"
+                    app:txttype="@string/regular" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_live_st"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/ll_des_lbl"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:layout_marginBottom="15.0dip"
+                android:background="@drawable/bg_squre_white">
+
+                <ImageView
+                    android:id="@+id/iv_back_search"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:padding="8.0dip"
+                    android:src="@drawable/ic_back" />
+
+                <com.kha.train.widget.MyEditText
+                    android:id="@+id/et_des_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_toRightOf="@+id/iv_back_search"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:hint="Station Name/Code"
+                    android:maxLines="1"
+                    android:paddingRight="10.0dip"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10.0dip"
+                android:visibility="gone" />
+
+            <com.kha.train.widget.MyTextView
+                android:id="@+id/tv_popular_lable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="0.0dip"
+                android:layout_marginRight="10.0dip"
+                android:drawablePadding="15.0dip"
+                android:gravity="center_vertical"
+                android:text="Popular Search"
+                android:textAllCaps="true"
+                android:textColor="#ff1d1c1c"
+                android:textSize="14.0sp"
+                android:visibility="visible"
+                app:txttype="@string/medium" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_popular_search"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="40.0dip"
+                android:paddingTop="10.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_no_data"
+        layout="@layout/layout_no_data_found"
+        android:visibility="gone" />
+</LinearLayout>

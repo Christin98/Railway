@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:orientation="vertical"
+    android:paddingLeft="15.0dip"
+    android:paddingRight="15.0dip">
+
+    <com.kha.train.widget.MyTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dip"
+        android:text="Station Change"
+        android:textColor="@color/black"
+        android:textSize="22.0sp"
+        app:txttype="@string/medium" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_search_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:text="You Searched for trains between NDLS and MAS"
+        android:textSize="12.0sp"
+        app:txttype="@string/regular" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_error_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:text="But this train travel between NZM(H Nizamuddin) and MAS(chennai central)"
+        android:textColor="@color/black"
+        android:textSize="12.0sp"
+        app:txttype="@string/regular" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip">
+
+        <ImageView
+            android:id="@+id/iv_dot1"
+            android:layout_width="15.0dip"
+            android:layout_height="15.0dip"
+            android:padding="2.0dip"
+            android:src="@drawable/ic_fill_dot"
+            app:tint="#ffe62d14" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="3.0dip"
+            android:layout_marginTop="6.0dip"
+            android:layout_toLeftOf="@+id/iv_dot2"
+            android:layout_toRightOf="@+id/iv_dot1"
+            android:background="@drawable/bg_dash_line"
+            android:layerType="software" />
+
+        <ImageView
+            android:id="@+id/iv_dot2"
+            android:layout_width="15.0dip"
+            android:layout_height="15.0dip"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_fill_dot"
+            app:tint="#ff620ec5" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="3.0dip"
+            android:layout_marginTop="6.0dip"
+            android:layout_toLeftOf="@+id/iv_dot3"
+            android:layout_toRightOf="@+id/iv_dot2"
+            android:background="#ff3b385e" />
+
+        <ImageView
+            android:id="@+id/iv_dot3"
+            android:layout_width="15.0dip"
+            android:layout_height="15.0dip"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_fill_dot"
+            app:tint="#ff620ec5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip">
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_point1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NDLS"
+            app:txttype="@string/regular" />
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_point2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="NZM"
+            app:txttype="@string/regular" />
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_point3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="MAS"
+            app:txttype="@string/regular" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40.0dip"
+        android:layout_marginBottom="20.0dip">
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/blue_fill_bt"
+            android:gravity="center_vertical"
+            android:paddingLeft="20.0dip"
+            android:paddingTop="0.0dip"
+            android:paddingRight="20.0dip"
+            android:paddingBottom="0.0dip"
+            android:text="Back"
+            android:textAllCaps="true"
+            android:textColor="#ffffffff"
+            android:textSize="16.0dip"
+            app:txttype="@string/medium" />
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="0.0dip"
+            android:background="@drawable/blue_fill_bt"
+            android:gravity="center_vertical"
+            android:paddingLeft="20.0dip"
+            android:paddingTop="0.0dip"
+            android:paddingRight="20.0dip"
+            android:paddingBottom="0.0dip"
+            android:text="Ok,Go Ahead"
+            android:textAllCaps="true"
+            android:textColor="#ffffffff"
+            android:textSize="16.0sp"
+            app:txttype="@string/medium" />
+    </RelativeLayout>
+</LinearLayout>

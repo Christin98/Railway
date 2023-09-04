@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_city"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/mainlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        >
+
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_city_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_code"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingRight="5.0dip"
+        android:text="Delhi"
+        android:textColor="@color/black"
+        android:textSize="20.0sp"
+        app:txttype="@string/regular" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="DLI"
+        android:textColor="@color/white"
+        android:textSize="18.0sp"
+        android:visibility="visible"
+        app:txttype="@string/regular"
+        android:background="@drawable/blue_fill_bt"
+        android:textStyle="bold"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_station_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_city_name"
+        android:text="old Delhi Railway Station"
+        android:textColor="@color/black"
+        app:txttype="@string/regular"
+        android:textSize="13dp"
+        />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/black"
+        android:layout_below="@+id/mainlay"
+        android:layout_marginTop="7dp"
+        />
+
+</RelativeLayout>

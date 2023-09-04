@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/bottomNavigation"
+        />
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ad_view"
+        app:mbn_backgroundBottomColor="@color/blue"
+        app:mbn_countBackgroundColor="#ff6f00"
+        app:mbn_countTextColor="#ffffff"
+        app:mbn_defaultIconColor="@color/white"
+        app:mbn_rippleColor="#807560BC"
+        app:mbn_selectedIconColor="@color/white"
+        app:mbn_shadowColor="#802C1E5B"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ad_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_id"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/tv_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16.0dip"
+        android:src="@drawable/ic_setting_blue"
+        android:visibility="gone"
+        />
+</RelativeLayout>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background1">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_find_train"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/iv_main"
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_round" />
+
+        <khaTCWhereismyTrain.widget.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_main"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="25.0sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/tv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16.0dip"
+            android:src="@drawable/vec_setting" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_find_train"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_center"
+        android:layout_marginLeft="18.0dip"
+        android:layout_marginRight="18.0dip"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_find_train"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="70.0dip"
+                android:orientation="horizontal"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="5.0dip"
+                    android:paddingBottom="5.0dip"
+                    android:src="@drawable/vec_train" />
+
+                <khaTCWhereismyTrain.widget.MyTextView
+                    android:id="@+id/tv_train_ticket"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_weight="1.0"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Find Trains"
+                    android:textColor="@color/txt_color_secondary"
+                    app:txttype="@string/regular" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15.0dip"
+                    android:src="@drawable/vec_right_arrow" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="18.0dip"
+        android:layout_marginTop="18.0dip"
+        android:layout_marginRight="18.0dip"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_live_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:minHeight="60.0dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip">
+
+                    <ImageView
+                        android:layout_width="40.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="5.0dip"
+                        android:paddingBottom="5.0dip"
+                        android:src="@drawable/vec_route" />
+
+                    <khaTCWhereismyTrain.widget.MyTextView
+                        android:id="@+id/ll_live_status"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:ellipsize="end"
+                        android:text="Live status"
+                        android:textColor="@color/txt_color_secondary"
+                        app:txttype="@string/regular" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_train_schedule"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5.0dip"
+                android:minHeight="60.0dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip">
+
+                    <ImageView
+                        android:layout_width="40.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="5.0dip"
+                        android:paddingBottom="5.0dip"
+                        android:src="@drawable/vec_calendar" />
+
+                    <khaTCWhereismyTrain.widget.MyTextView
+                        android:id="@+id/tv_train_schedule"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:text="Train Route and Schedule"
+                        android:textColor="@color/txt_color_secondary"
+                        app:txttype="@string/regular" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_center"
+        android:layout_marginLeft="18.0dip"
+        android:layout_marginRight="18.0dip"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_live_station"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5.0dip"
+                android:minHeight="60.0dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip">
+
+                    <ImageView
+                        android:layout_width="40.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="5.0dip"
+                        android:paddingBottom="5.0dip"
+                        android:src="@drawable/vec_live" />
+
+                    <khaTCWhereismyTrain.widget.MyTextView
+                        android:id="@+id/tv_live_station"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Live station"
+                        android:textColor="@color/txt_color_secondary"
+                        app:txttype="@string/regular" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_pnr_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:minHeight="60.0dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip">
+
+                    <ImageView
+                        android:layout_width="40.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="5.0dip"
+                        android:paddingBottom="5.0dip"
+                        android:src="@drawable/vec_list" />
+
+                    <khaTCWhereismyTrain.widget.MyTextView
+                        android:id="@+id/tv_pnr_status"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_live_station"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="PNR Status"
+                        android:textColor="@color/txt_color_secondary"
+                        app:txttype="@string/regular" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+        <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mbn_backgroundBottomColor="@color/blue"
+            app:mbn_countBackgroundColor="#ff6f00"
+            app:mbn_countTextColor="#ffffff"
+            app:mbn_defaultIconColor="@color/white"
+            app:mbn_rippleColor="#80FFFFFF"
+            app:mbn_selectedIconColor="@color/white"
+            app:mbn_shadowColor="#802C1E5B"
+            android:layout_above="@+id/ad_view"
+            />
+
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ad_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_id" />
+</RelativeLayout>-->

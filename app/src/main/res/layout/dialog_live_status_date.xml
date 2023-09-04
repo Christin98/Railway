@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20.0dip">
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="10.0dip"
+        android:text="Slect Train starting Date"
+        android:textAllCaps="true"
+        android:textColor="#ffaaaaaa"
+        android:textSize="12.0sp"
+        app:txttype="@string/regular" />
+
+    <LinearLayout
+        android:id="@+id/ll_day_before"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="10.0dip">
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_day_befor_lbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:text="Day Before yesterday"
+            android:textColor="@color/black"
+            android:textSize="16.0sp"
+            app:txttype="@string/regular" />
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_day_befor"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_day_befor_lbl"
+            android:text="Wednesday, 22 Mar 19"
+            android:textColor="#ff9b9b9b"
+            android:textSize="14.0sp"
+            app:txttype="@string/regular" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_yesterday"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="10.0dip">
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_yester_lbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:text="Yesterday"
+            android:textColor="@color/black"
+            android:textSize="16.0sp"
+            app:txttype="@string/regular" />
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_yester"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Wednesday, 22 Mar 19"
+            android:textColor="#ff9b9b9b"
+            android:textSize="14.0sp"
+            app:txttype="@string/regular" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_today"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="10.0dip">
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_today_lbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:text="Today"
+            android:textColor="@color/black"
+            android:textSize="16.0sp"
+            app:txttype="@string/regular" />
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_today"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Wednesday, 22 Mar 19"
+            android:textColor="#ff9b9b9b"
+            android:textSize="14.0sp"
+            app:txttype="@string/regular" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tommorr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="10.0dip">
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_tommorr_lbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:text="Tomorrow"
+            android:textColor="@color/black"
+            android:textSize="16.0sp"
+            app:txttype="@string/regular" />
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_tommorr"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Wednesday, 22 Mar 19"
+            android:textColor="#ff9b9b9b"
+            android:textSize="14.0sp"
+            app:txttype="@string/regular" />
+    </LinearLayout>
+</LinearLayout>

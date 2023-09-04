@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_data"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_marginTop="18.0dip"
+                android:layout_marginRight="10.0dip"
+                android:padding="6.0dip"
+                android:src="@drawable/ic_back" />
+
+            <com.kha.train.widget.MyTextView
+                android:id="@+id/tv_route_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dip"
+                android:layout_toRightOf="@+id/iv_back"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Pune To Mumbai"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:maxLines="1"
+                android:maxLength="20"
+                app:txttype="@string/medium"
+
+                />
+
+            <com.kha.train.widget.MyTextView
+                android:id="@+id/tv_route_date"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="08 Mar\nFriday"
+                android:textColor="@color/black"
+                android:textSize="16.0sp"
+                app:txttype="@string/regular"
+                android:minHeight="50dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <View
+                android:id="@+id/v_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@+id/tv_route_date"
+                android:layout_marginTop="5.0dip"
+                android:background="@color/black"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/v_line"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_travel_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:tag="1">
+
+                    <LinearLayout
+                        android:id="@+id/lay1"
+                        android:layout_width="110dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/blue_fill_bt"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:tag="1"
+                        >
+
+                        <com.kha.train.widget.MyTextView
+                            android:id="@+id/text1traveltime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:text="Travel Time"
+                            android:textColor="@color/white"
+                            app:txttype="@string/medium" />
+
+                        <ImageView
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layout_marginLeft="-5.0dip"
+                            android:padding="8.0dip"
+                            android:src="@drawable/ic_down_arrow"
+                            android:visibility="visible"
+                            app:tint="@color/white"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_departure"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:tag="0">
+
+                    <LinearLayout
+                        android:id="@+id/lay2"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/blue_fill_out_bt"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:tag="0"
+                        >
+
+                        <com.kha.train.widget.MyTextView
+                            android:id="@+id/text2departure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:text="Departure"
+                            android:textColor="@color/blue"
+                            app:txttype="@string/regular" />
+
+                        <ImageView
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layout_marginLeft="-5.0dip"
+                            android:padding="8.0dip"
+                            android:src="@drawable/ic_down_arrow"
+                            android:visibility="gone"
+                            app:tint="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_arrival"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:tag="0">
+                        <LinearLayout
+                            android:id="@+id/lay3"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/blue_fill_out_bt"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:tag="0"
+                            >
+                        <com.kha.train.widget.MyTextView
+                            android:id="@+id/text3arrive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:text="Arrival"
+                            android:textColor="@color/blue"
+                            app:txttype="@string/regular" />
+
+                        <ImageView
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layout_marginLeft="-5.0dip"
+                            android:padding="8.0dip"
+                            android:src="@drawable/ic_down_arrow"
+                            android:visibility="gone"
+                            app:tint="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_rail"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/rl_header"
+            android:layout_marginTop="10.0dip" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/layout_no_data"
+        layout="@layout/layout_no_data_found"
+        android:visibility="gone" />
+</LinearLayout>

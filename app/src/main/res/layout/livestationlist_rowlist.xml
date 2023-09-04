@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/train_rout_schedual_bg"
+    android:paddingLeft="10.0dip"
+    android:paddingTop="10.0dip"
+    android:paddingRight="10.0dip">
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_train_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_fill_bt"
+        android:paddingLeft="5.0dip"
+        android:paddingTop="2.0dip"
+        android:paddingRight="5.0dip"
+        android:paddingBottom="2.0dip"
+        android:text="12345"
+        android:textColor="@color/white"
+        android:textSize="18.0sp"
+        app:txttype="@string/regular" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_train_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_toRightOf="@+id/tv_train_id"
+        android:text="gujarat express"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="20.0sp"
+        app:txttype="@string/medium" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_plateform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_train_name"
+        android:layout_marginTop="5.0dip"
+        android:text="Expected Platform #"
+        android:textColor="@color/blue"
+        android:textSize="16.0sp"
+        app:txttype="@string/regular" />
+
+    <com.kha.train.widget.MyTextView
+        android:id="@+id/tv_st_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_train_name"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="7.0dip"
+        android:layout_toRightOf="@+id/tv_plateform"
+        android:background="@drawable/blue_fill_bt"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip"
+        android:paddingBottom="2.0dip"
+        android:paddingTop="2dp"
+        android:text="source"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="11.0sp"
+        android:visibility="gone"
+        app:txttype="@string/medium" />
+
+    <LinearLayout
+        android:id="@+id/ll_train_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="180.0dip"
+        android:layout_below="@+id/tv_plateform"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_arr_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Arrival"
+            android:textColor="@color/black"
+            android:textSize="18.0sp"
+            app:txttype="@string/medium"
+            android:layout_margin="5dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:background="@drawable/train_rout_schedual_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="20.0dip">
+
+            <com.kha.train.widget.MyTextView
+                android:id="@+id/tv_expt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5.0dip"
+                android:layout_toLeftOf="@+id/tv_schd"
+                android:paddingLeft="5.0dip"
+                android:text="Expt. 10:23"
+                android:textColor="@color/blue"
+                app:txttype="@string/medium"
+                android:layout_alignParentLeft="true"
+                android:textSize="18dp"
+                />
+
+            <com.kha.train.widget.MyTextView
+                android:id="@+id/tv_schd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Schd. 10:23"
+                android:textColor="@color/black"
+                app:txttype="@string/regular"
+                android:textSize="18dp"
+                />
+
+
+        </RelativeLayout>
+
+        <com.kha.train.widget.MyTextView
+            android:id="@+id/tv_dep_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Departure"
+            android:textColor="@color/black"
+            android:textSize="18.0sp"
+            app:txttype="@string/medium"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="20.0dip"
+            android:background="@drawable/train_rout_schedual_bg"
+            >
+
+            <com.kha.train.widget.MyTextView
+                android:id="@+id/tv_dep_expt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5.0dip"
+                android:layout_toLeftOf="@+id/tv_dep_schd"
+                android:paddingLeft="5.0dip"
+                android:text="Expt. 10:23"
+                android:textColor="@color/blue"
+                app:txttype="@string/medium"
+                android:layout_alignParentLeft="true"
+                android:textSize="18dp"
+                />
+
+            <com.kha.train.widget.MyTextView
+                android:id="@+id/tv_dep_schd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Schd. 10:23"
+                android:textColor="@color/black"
+                app:txttype="@string/regular"
+                android:textSize="18dp"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="20.0dip">
+
+            <com.kha.train.widget.MyTextView
+                android:id="@+id/tv_train_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Running on Time"
+                android:textColor="#ff1a7971"
+                android:textSize="14.0sp"
+                app:txttype="@string/medium"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
